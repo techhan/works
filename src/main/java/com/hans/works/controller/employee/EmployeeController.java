@@ -3,10 +3,7 @@ package com.hans.works.controller.employee;
 import com.hans.works.dto.request.employee.EmployeeAddRequest;
 import com.hans.works.dto.response.empolyee.EmployeeListResponse;
 import com.hans.works.service.employee.EmployeeService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,7 +17,7 @@ public class EmployeeController {
     }
 
     @PostMapping("/employee")
-    public void addEmployee(@RequestParam EmployeeAddRequest request) {
+    public void addEmployee(@RequestBody EmployeeAddRequest request) {
         employeeService.addEmployee(request);
     }
 

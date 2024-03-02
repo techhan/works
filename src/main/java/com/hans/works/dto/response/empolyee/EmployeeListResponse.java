@@ -1,5 +1,6 @@
 package com.hans.works.dto.response.empolyee;
 
+import com.hans.works.domain.Employee;
 import com.hans.works.domain.Role;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,4 +15,12 @@ public class EmployeeListResponse {
     private Role role;
     private LocalDate birthday;
     private LocalDate workStartDate;
+
+    public EmployeeListResponse(Employee employee) {
+        this.name = employee.getName();
+        this.teamName = employee.getTeam().getName();
+        this.role = employee.getRole();
+        this.birthday = employee.getBirthday();
+        this.workStartDate = employee.getWorkStartDate();
+    }
 }

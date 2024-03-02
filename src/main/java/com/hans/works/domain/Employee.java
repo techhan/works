@@ -15,20 +15,25 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(nullable = false)
     private String name; // 직원 이름
-//    @Column(nullable = false)
-//    private String teamName; // 소속된 팀 이름
 
     @ManyToOne
-    @JoinColumn(name = "team_id")
+    @JoinColumn(nullable = false, name = "team_name")
     private Team team;
 
     @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
     private Role role; // 역할
+
     @Column(nullable = false)
     private LocalDate workStartDate; // 입사일
+
     @Column(nullable = false)
     private LocalDate birthday; // 생일
 
+    public void changeRole(Role role) {
+        this.role = role;
+    }
 }
