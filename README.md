@@ -11,7 +11,7 @@
 <br>
 
 # 프로젝트 진행 사항
-- [X] [프로젝트 1단계](https://devhan.tistory.com/326)
+- [X] <a href="https://devhan.tistory.com/326" target="_blank">프로젝트 1단계</a>
 - [ ] 프로젝트 2단계
 - [ ] 프로젝트 3단계
 - [ ] 프로젝트 4단계
